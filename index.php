@@ -9,7 +9,12 @@ $token = $_ENV['AUTH_TOKEN'];
 $client = new Client($sid, $token);
 
 /* Download data from Twilio API */
-$messages = $client->messages->stream();
+$messages = $client->messages->stream(array
+    (   
+      'dateSentAfter' => '2017-02-23', 
+      'dateSentBefore' => '2017-02-27',
+    )
+);
 
 // /* Browser magic */
 $filename = $sid."_sms.csv"; 
