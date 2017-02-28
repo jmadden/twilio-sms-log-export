@@ -10,7 +10,7 @@
 ## Instructions
 
 1. Load this code to a Heroku server.
-2. Add your Twilio Account SID and Auth Token as environment variables.
+2. Add your Twilio Account SID and Auth Token as environment variables on your Heroku server. Note: You could always hardcode your Twilio Account SID and Auth Token if you are not using Heroku.
 3. Change the filters passed in to meet your needs. You can use `to`, `from`, `dateSent`, `dateSentAfter`, and `dateSentBefore`.
 
 ```php
