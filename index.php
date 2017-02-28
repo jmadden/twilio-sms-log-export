@@ -41,5 +41,3 @@ foreach ($messages as $sms) {
 
   echo '"'.implode('","', $row).'"'."\n"; 
 }
-
-echo $_REQUEST['sid'];
