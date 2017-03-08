@@ -13,7 +13,7 @@
 2. Add your Twilio Account SID and Auth Token as environment variables on your Heroku server. Note: You could always hardcode your Twilio Account SID and Auth Token if you are not using Heroku.
 3. Change the filters passed in to meet your needs. You can use `to`, `from`, `dateSent`, `dateSentAfter`, and `dateSentBefore`.
 
-```php
+    ```php
 $messages = $client->messages->stream(array
     (   
       'dateSentAfter' => '2017-02-23', 
