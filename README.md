@@ -10,7 +10,7 @@
 ## Instructions
 
 1. Load this code to a Heroku server.
-    * If you are not using Heroku then you will have to edit the composer file to only include `"twilio/sdk": "^5.5"`. Then run `composer install` from terminal.
+    * If you are not using Heroku then you will have to edit the composer file to only include `"twilio/sdk": "^5.5"`. Then run `composer install` from terminal to install the [Twilio PHP Helper Library](https://www.twilio.com/docs/libraries/php).
 2. Add your Twilio Account SID and Auth Token as environment variables on your Heroku server. Note: You could always hardcode your Twilio Account SID and Auth Token if you are not using Heroku.
 3. Change the filters passed in to meet your needs. You can use `to`, `from`, `dateSent`, `dateSentAfter`, and `dateSentBefore`. Here is an example:
 
