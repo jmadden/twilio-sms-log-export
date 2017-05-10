@@ -3,6 +3,7 @@
 ## Requirements
 
 * Twilio account
+* [Twilio PHP Helper Library](https://www.twilio.com/docs/libraries/php)
 * Webserver - Heroku was used for this example
 * PHP
 * Composer
