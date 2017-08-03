@@ -1,0 +1,5 @@
+{
+  "name": "Twilio Message Logs Exporter",
+  "description": "A quick way to export your entire Twilio message logs to a CSV file.",
+  "repository": "https://github.com/jmadden/twilio-sms-log-export"
+}

@@ -1,3 +1,6 @@
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+
 # Export Twilio Message Logs to CSV
 
 ## Requirements
@@ -8,7 +11,7 @@
 * PHP
 * Composer
 
-## Instructions
+## Instructionss
 
 1. Load this code to a Heroku server.
     * If you are not using Heroku then you will have to edit the composer file to only include `"twilio/sdk": "^5.5"`. Then run `composer install` from terminal to install the [Twilio PHP Helper Library](https://www.twilio.com/docs/libraries/php).
