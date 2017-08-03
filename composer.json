@@ -1,6 +1,6 @@
 {
     "require": {
-        "twilio/sdk": "^5.5",
+        "twilio/sdk": "^5.13",
         "silex/silex": "^2.0.4",
         "monolog/monolog": "^1.22",
         "twig/twig": "^2.0",
