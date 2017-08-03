@@ -1,44 +1,38 @@
-<?php
-// Get the PHP helper library from twilio.com/docs/php/install
-require __DIR__ . '/vendor/autoload.php'; // Loads the library. This may vary depending on how you installed the library.
-use Twilio\Rest\Client;
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Title of the document</title>
+        
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-// Your Account Sid and Auth Token from twilio.com/user/account
-$sid = $_ENV['ACCOUNT_SID'];
-$token = $_ENV['AUTH_TOKEN'];
-$client = new Client($sid, $token);
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-/* Download data from Twilio API */
-$messages = $client->messages->stream(array
-    (   
-      'dateSentAfter' => '2017-02-23', 
-      'dateSentBefore' => '2017-02-27',
-    )
-);
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </head>
 
-// /* Browser magic */
-$filename = $sid."_sms.csv"; 
-header("Content-Type: application/csv");
-header("Content-Disposition: attachment; filename={$filename}");
+    <form>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputFile">File input</label>
+            <input type="file" id="exampleInputFile">
+            <p class="help-block">Example block-level help text here.</p>
+        </div>
+            <div class="checkbox">
+        <label>
+            <input type="checkbox"> Check me out
+        </label>
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
 
-/* Write headers */
-$fields = array( 'SMS Message SID', 'From', 'To', 'Date Sent', 'Status', 'Direction', 'Message Segments', 'Price', 'Body' );
-echo '"'.implode('","', $fields).'"'."\n";
-
-/* Write rows */
-foreach ($messages as $sms) { 
-    $dateSent = $sms->dateSent;
-    $row = array(
-        $sms->sid,
-        $sms->from,
-        $sms->to,
-        $dateSent->format('Y-m-d H:i:s'),
-        $sms->status,
-        $sms->direction,
-        $sms->numSegments,
-        $sms->price,
-        $sms->body
-    );
-
-  echo '"'.implode('","', $row).'"'."\n"; 
-}
+</html>
