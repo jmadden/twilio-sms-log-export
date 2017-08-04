@@ -15,3 +15,4 @@ Ever need to download your Twilio Message Logs to a spreadsheet, but didn't have
 2. You will be brought to your Heroku account. Click the **Deploy** button.
 3. When deployment is complete click the **View** button.
 4. Follow the instructions on screen to download a .csv file of your Twilio message logs.
+5. :beer: (optional)
