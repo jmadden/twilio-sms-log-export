@@ -16,3 +16,8 @@ Ever need to download your Twilio Message Logs to a spreadsheet, but didn't have
 3. When deployment is complete click the **View** button.
 4. Follow the instructions on screen to download a .csv file of your Twilio message logs.
 5. :beer: (optional)
+
+## Notes
+This is meant to be a quick and easy (no bells and whistles) way for you to download your Twilio message logs. Please help yourself to the code in this repo if you're looking to build your own solution.
+
+Find a bug, or want a feature added? File an issue in the repo and I'll do my best to get it sorted out.
