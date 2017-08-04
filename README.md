@@ -1,30 +1,16 @@
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 
-# Export Twilio Message Logs to CSV
+
+# Export Twilio Message Logs to CSV File
+
+Ever need to download your Twilio Message Logs to a spreadsheet, but didn't have the time, or know-how to write the code yourself? Well you're in luck, because I did it for you!
 
 ## Requirements
+1. Your Live Twilio Account SID and AuthToken, found here: https://www.twilio.com/console/account/settings
+2. A free Heroku account. [Get on here if you don't already have one!](https://id.heroku.com/signup/login)
 
-* Twilio account
-* [Twilio PHP Helper Library](https://www.twilio.com/docs/libraries/php)
-* Webserver - Heroku was used for this example
-* PHP
-* Composer
+## Instructions For Use
+1. Log into your Heroku account if you are not already.
+2. Press this shiny purple button!
 
-## Instructionss
-
-1. Load this code to a Heroku server.
-    * If you are not using Heroku then you will have to edit the composer file to only include `"twilio/sdk": "^5.5"`. Then run `composer install` from terminal to install the [Twilio PHP Helper Library](https://www.twilio.com/docs/libraries/php).
-2. Add your Twilio Account SID and Auth Token as environment variables on your Heroku server. Note: You could always hardcode your Twilio Account SID and Auth Token if you are not using Heroku.
-3. Change the filters passed in to meet your needs. You can use `to`, `from`, `dateSent`, `dateSentAfter`, and `dateSentBefore`. Here is an example:
-
-```php
-$messages = $client->messages->stream(array
-    (   
-      'dateSentAfter' => '2017-02-23', 
-      'dateSentBefore' => '2017-02-27',
-    )
-);
-```
-
-4. Visit the Heroku url in a browser and you will be prompted to download a CSV file.
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
