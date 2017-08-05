@@ -17,7 +17,7 @@ Once you have the requirements taken care of:
 2. You will be brought to your Heroku account. Click the **Deploy** button.
 3. When deployment is complete click the **View** button.
 4. Follow the instructions on screen to download a .csv file of your Twilio message logs.
-5. :beer: (optional)
+5. Have a :beer: (optional)
 
 ## Notes
 This is meant to be a quick and easy (no bells and whistles) way for you to download your Twilio message logs. Please help yourself to the code in this repo if you're looking to build your own solution.
