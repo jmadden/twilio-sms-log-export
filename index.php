@@ -32,7 +32,7 @@
                 <form action="exportlog.php" method="POST">
                     <div class="form-group">
                         <p>
-                            Below please enter your Live Twilio Account Sid and AuthToken, then click the Submit button to download a CSV file of all message logs from your Twilio account EVER! <br> Or, be reasonable and select a date range. 
+                            Below please enter your Live Twilio Account SID and AuthToken, then click the Submit button to download a CSV file of ALL message logs from your Twilio account. <br> Or, be reasonable and select a date range. 
                         </p>
                     </div>
                     
