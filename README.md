@@ -7,7 +7,7 @@ Ever need to download your Twilio Message Logs to a spreadsheet, but didn't have
 
 ## Requirements
 1. Your Live Twilio Account SID and AuthToken, found here: https://www.twilio.com/console/account/settings
-2. A free Heroku account. [Get on here if you don't already have one!](https://id.heroku.com/signup/login)
+2. A free Heroku account. [Get one here if you don't already have one!](https://id.heroku.com/signup/login)
 
 ## Instructions For Use
 1. Click this shiny purple button!
