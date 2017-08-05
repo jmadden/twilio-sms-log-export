@@ -10,6 +10,8 @@ Ever need to download your Twilio Message Logs to a spreadsheet, but didn't have
 2. A free Heroku account. [Get one here if you don't already have one!](https://id.heroku.com/signup/login)
 
 ## Instructions For Use
+Once you have the requirements taken care of:
+
 1. Click this shiny purple button!
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 2. You will be brought to your Heroku account. Click the **Deploy** button.
