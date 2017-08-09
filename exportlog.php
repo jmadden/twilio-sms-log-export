@@ -8,20 +8,51 @@ $sid = $_POST['sid'];
 $token = $_POST['authToken'];
 $from = $_POST['from'];
 $to = $_POST['to'];
+$date = '';
+
+
+echo $to;
+echo '<br>';
+echo $from;
+echo '<br>';
 
 $client = new Client($sid, $token);
 
 /* Download data from Twilio API */
 if (!empty($from) || !empty($to)){
-    $messages = $client->messages->read(array
-        (   
-        'dateSentAfter' => $from, 
-        'dateSentBefore' => $to,
-        )
-    );
-} else {
-    $messages = $client->messages->read();
+
+    if ($from == $to){
+        $date = array
+            (
+                'dateSent' => $from
+            );
+    }
+    
+    if (!empty($from) && empty($to)){
+        $date = array
+            (   
+                'dateSentAfter' => $from,
+            );
+    }
+
+    if (empty($from) && !empty($to)){
+        $date = array
+            (   
+                'dateSentBefore' => $to,
+            );
+    }
+
+    if (!empty($from) && !empty($to) && $from != $to){
+     $date = array
+            (   
+                'dateSentAfter' => $from, 
+                'dateSentBefore' => $to,
+            );
+    }
 }
+
+$messages = $client->messages->read($date);
+
 
 // /* Browser magic */
 $filename = $sid."_sms.csv"; 
