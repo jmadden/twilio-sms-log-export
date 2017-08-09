@@ -51,7 +51,7 @@ if (!empty($from) || !empty($to)){
     }
 }
 
-$messages = $client->messages->read($date);
+$messages = $client->messages->stream($date);
 
 
 // /* Browser magic */
